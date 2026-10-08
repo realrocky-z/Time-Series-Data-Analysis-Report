@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ts-analysis"
+version = "1.0.0"
+description = "Apple (AAPL) 日度股票时间序列分析的可复用代码包：清洗、EDA、ARIMA 与 ARMA-GARCH 建模、诊断与稳健性检验"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.23",
+    "pandas>=1.5",
+    "scipy>=1.9",
+    "statsmodels>=0.13",
+    "arch>=5.0",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyter", "matplotlib>=3.6", "scikit-learn>=1.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
